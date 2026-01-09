@@ -48,13 +48,16 @@ export function ChartRadarLegend() {
                         data={chartData}
                         margin={{
                             top: -40,
-                            bottom: -10
+                            bottom: -10,
+                            left: 0,
+                            right: 0
                         }}>
                         <ChartTooltip cursor={false} content={<ChartTooltipContent indicator='line' />} />
                         <PolarAngleAxis dataKey='month' />
                         <PolarGrid />
                         <Radar dataKey='desktop' fill='var(--color-desktop)' fillOpacity={0.6} />
                         <Radar dataKey='mobile' fill='var(--color-mobile)' />
+                        {/* @ts-ignore */}
                         <ChartLegend className='mt-8' content={<ChartLegendContent />} />
                     </RadarChart>
                 </ChartContainer>
